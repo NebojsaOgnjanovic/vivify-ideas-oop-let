@@ -16,8 +16,8 @@ public class Application {
 
 		Let let = new Let("Let21310", 5250);
 
-		Pilot pilotMarko = new Pilot("Andrea", "Romanic", 66);
-		Pilot pilotDusan = new Pilot("Sonja", "Ristic", 83);
+		Pilot pilotMarko = new Pilot("Marko", "Puric", 66);
+		Pilot pilotDusan = new Pilot("Dusan", "Ivanovic", 83);
 
 		Putnik[] putnici = { new Putnik("Nebojsa", "Ognjanovic"), new Putnik("Igor", "Igorijevic"),
 				new Putnik("Zinedin", "Zidan"), new Putnik("Milan", "Ivanovic"), new Putnik("Ivan", "Milanovic"),

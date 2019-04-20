@@ -74,13 +74,13 @@ public class Let {
 	}
 
 	public void izvrsiLet() {
-		logger.loguj("\n==============================================", true);
+		logger.loguj("\n=========================================================", true);
 		if (pilot == null) {
 			logger.loguj("\nNeuspelo poletanje !!!Nedostaje nam pilot", false);
 		} else if (listaIzgubljenihPrtljaga.isEmpty()) {
 			logger.loguj("\nNema izgubljenog prtljaga !!!", true);
 		} else {
-			logger.loguj("\nPutnici ciji prtljag nedostaje su:", true);
+			logger.loguj("\n\n\nPutnici ciji prtljag nedostaje su:", true);
 			for (Prtljag prtljag : listaIzgubljenihPrtljaga) {
 				masaIzgubljenihPrtljaga += prtljag.getTezinaPrtljaga();
 				logger.loguj(String.format("\n %s %s", prtljag.getVlasnikPrtljaga().getIme(),

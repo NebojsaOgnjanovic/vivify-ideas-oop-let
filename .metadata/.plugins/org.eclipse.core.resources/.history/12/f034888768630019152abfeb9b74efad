@@ -80,7 +80,7 @@ public class Let {
 		} else if (listaIzgubljenihPrtljaga.isEmpty()) {
 			logger.loguj("\nNema izgubljenog prtljaga !!!", true);
 		} else {
-			logger.loguj("\nPutnici ciji prtljag nedostaje su:", true);
+			logger.loguj("\n\n\nPutnici ciji prtljag nedostaje su:", true);
 			for (Prtljag prtljag : listaIzgubljenihPrtljaga) {
 				masaIzgubljenihPrtljaga += prtljag.getTezinaPrtljaga();
 				logger.loguj(String.format("\n %s %s", prtljag.getVlasnikPrtljaga().getIme(),

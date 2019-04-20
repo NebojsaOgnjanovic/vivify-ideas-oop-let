@@ -9,7 +9,7 @@ import java.util.Date;
 public class Logger {
 	private static Logger logInst;
 
-	private String putanjaFajla = "let.log.txt";
+	private String putanjaFajla = "log.fajl";
 
 	private BufferedWriter bw = null;
 	private FileWriter fw = null;

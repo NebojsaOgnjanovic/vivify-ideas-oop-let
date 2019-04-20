@@ -1,0 +1,36 @@
+package prtljag;
+
+import osobe.Putnik;
+
+public abstract class Prtljag {	
+	protected Putnik vlasnik;
+	protected int tezinaPrtljaga;
+	
+	public Prtljag(Putnik vlasnikPrtljaga, int tezinaPrtljaga) {
+		this.vlasnik = vlasnikPrtljaga;
+		this.tezinaPrtljaga = tezinaPrtljaga;
+		// dodajemo prtljag na listu prtljaga putnika
+		vlasnikPrtljaga.getPrtljag().add(this);
+	}
+	
+	public abstract void nasumicnoIzgubiPrtljag();
+	
+	public abstract void IzgubiPrtljag();
+
+	public Putnik getVlasnikPrtljaga() {
+		return vlasnik;
+	}
+
+	public void setVlasnikPrtljaga(Putnik vlasnikPrtljaga) {
+		this.vlasnik = vlasnikPrtljaga;
+	}
+
+	public int getTezinaPrtljaga() {
+		return tezinaPrtljaga;
+	}
+
+	public void setTezinaPrtljaga(int tezinaPrtljaga) {
+		this.tezinaPrtljaga = tezinaPrtljaga;
+	}
+	
+}

@@ -1,0 +1,43 @@
+package app;
+
+import java.lang.reflect.Array;
+import java.util.Random;
+
+import exceptions.NemaLicencu;
+import let.Let;
+import osobe.Pilot;
+import osobe.Putnik;
+import prtljag.Prtljag;
+import prtljag.PrtljagFactory;
+
+public class Application {
+
+	public static void main(String[] args) throws NemaLicencu {
+
+		Let let = new Let("Let21310", 2000);
+		Putnik[] putnici = { new Putnik("Marko", "Markovic"), new Putnik("Petar", "Petrovic"),
+				new Putnik("Slobodan", "Slobodanovic"), new Putnik("Zarko", "Zarkovic"),
+				new Putnik("Slavko", "Mitrovic"), new Putnik("Mirko", "Slavkovic"), new Putnik("Vuk", "Dragicevic"),
+				new Putnik("Neo", "Matriksovic"), new Putnik("Darko", "Vitorovic"), new Putnik("Bil", "Gejts") };
+		Random rnd = new Random();
+
+		Pilot pilotMarko = new Pilot("Marko", "Puric", 60);
+		Pilot pilotDusan = new Pilot("Dusan", "Ivanovic", 95);
+
+		for (int i = 0; i < putnici.length; i++) {
+			int tezinaPrtljaga = rnd.nextInt(5 - 1 + 1) + 1;
+			Prtljag tmpPrtljag = PrtljagFactory.kreirajPrtljag(putnici[i], tezinaPrtljaga);
+			let.ukrcajPutnika(putnici[i]);
+			if (putnici[i].getLet() != null) {
+				tmpPrtljag.nasumicnoIzgubiPrtljag();
+			}
+		}
+
+		let.postaviPilota(pilotDusan);
+		let.postaviPilota(pilotMarko);
+
+		let.izvrsiLet();
+
+	}
+
+}

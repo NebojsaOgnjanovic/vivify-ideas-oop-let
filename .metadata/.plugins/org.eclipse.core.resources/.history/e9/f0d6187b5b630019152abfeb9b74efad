@@ -1,0 +1,7 @@
+package exceptions;
+
+public class ImaLicencu extends Exception{
+	public ImaLicencu(String poruka) {
+		super(poruka);
+	}
+}
